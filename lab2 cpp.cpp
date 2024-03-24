@@ -1,32 +1,32 @@
-#include <iostream> // для виводу і вводу
-#include <iomanip> // для використання функції setlocale
+#include <iostream> // РґР»СЏ РІРІРѕРґСѓ С– РІРёРІРѕРґСѓ
+#include <iomanip> // РґР»СЏ РІРёРєРѕСЂРёСЃС‚Р°РЅРЅСЏ С„СѓРЅРєС†С–С— setlocale
 using namespace std;
 
-template<typename T> //шаблон функції для конвертації часу
+template<typename T> //С€Р°Р±Р»РѕРЅ С„СѓРЅРєС†С–С— РґР»СЏ РєРѕРЅРІРµСЂС‚Р°С†С–С— С‡Р°СЃСѓ
 void convertTime(T seconds) {
 
-    int years, months, days, hours, minutes; //зберігання даних конвертації
+    int years, months, days, hours, minutes; //Р·Р±РµСЂС–РіР°РЅРЅСЏ РґР°РЅРёС…Вї
 
-    years = seconds / 31536000; //секунд в році
-    months = seconds / 2592000; //секунд в місяці
-    days = seconds / 86400; //секунд в дні
-    hours = seconds / 3600; //секунд в годині
-    minutes = seconds / 60; //секунд в хвилині
+    years = seconds / 31536000; //СЂРѕРєС–РІ РІ СЃРµРєСѓРЅРґР°С…
+    months = seconds / 2592000; //РјС–СЃСЏС†С–РІ РІ СЃРµРєСѓРЅРґР°С…
+    days = seconds / 86400; //РґРЅС–РІ РІ СЃРµРєСѓРЅРґР°С…
+    hours = seconds / 3600; //РіРѕРґРёРЅ РІ СЃРµРєСѓРЅРґР°С…
+    minutes = seconds / 60; //С…РІРёР»РёРЅ РІ СЃРµРєСѓРЅРґР°С…
   
-    //вивід результатів
-    cout << "Роки: " << years << endl;
-    cout << "Мiсяцi: " << months << endl;
-    cout << "Днi: " << days << endl;
-    cout << "Години: " << hours << endl;
-    cout << "Хвилини: " << minutes << endl;
-    cout << "Секунди: " << seconds << endl;
+    //РІРёРІС–Рґ СЂРµР·СѓР»СЊС‚Р°С‚С–РІ
+    cout << "Р РѕРєРё: " << years << endl;
+    cout << "РњС–СЃСЏС†С–: " << months << endl;
+    cout << "Р”РЅС–: " << days << endl;
+    cout << "Р“РѕРґРёРЅРё: " << hours << endl;
+    cout << "РҐРІРёР»РёРЅРё: " << minutes << endl;
+    cout << "РЎРµРєСѓРЅРґРё: " << seconds << endl;
 }
- //головна функція
+ //РіРѕР»РѕРІРЅР° С„СѓРЅРєС†С–СЏ
 int main() {
-    setlocale(LC_ALL, "ukr"); //встановлення української локалізації
+    setlocale(LC_ALL, "ukr"); //СѓРєСЂР°С—РЅСЃСЊРєР° Р»РѕРєР°Р»С–Р·Р°С†С–СЏ
     int inputSeconds;
-    cout << "Введiть кiлькiсть секунд: "; //вводимо к-сть секунд
-    cin >> inputSeconds; //виводимо всі результати
-    convertTime(inputSeconds); //викликаємо функцію для конвертації часу
+    cout << "Р’РІРµРґС–С‚СЊ РєС–Р»СЊРєС–СЃС‚СЊ СЃРµРєСѓРЅРґ: "; //РІРІРѕРґРёРјРѕ Рє-СЃС‚СЊ СЃРµРєСѓРЅРґ
+    cin >> inputSeconds; //РІРёРІРѕРґРёРјРѕ СЂРµР·СѓР»СЊС‚Р°С‚Рё
+    convertTime(inputSeconds); //РІРёРєР»РёРє С„СѓРЅРєС†С–С— РєРѕРЅРІРµСЂС‚Р°С†С–С— С‡Р°СЃСѓ
     return 0;
 }
